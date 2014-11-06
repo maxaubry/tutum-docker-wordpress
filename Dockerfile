@@ -18,8 +18,10 @@ RUN chmod +x /*.sh
 RUN apt-get update
 RUN apt-get install -y openssh-server
 RUN mkdir -p /var/run/sshd
-CMD /usr/sbin/sshd -D
+
+
 
 EXPOSE 22 80 3306
 
+CMD /usr/sbin/sshd -D
 CMD ["/run.sh"]
