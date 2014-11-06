@@ -23,5 +23,5 @@ RUN mkdir -p /var/run/sshd
 
 EXPOSE 22 80 3306
 
-CMD /usr/sbin/sshd -D
+CMD /usr/sbin/sshd
 CMD ["/run.sh"]
