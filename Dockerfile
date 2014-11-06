@@ -19,9 +19,9 @@ RUN apt-get update
 RUN apt-get install -y openssh-server
 RUN mkdir -p /var/run/sshd
 
+EXPOSE 80 3306
 
-
-EXPOSE 22 80 3306
-
-CMD ["/usr/sbin/sshd"]
 CMD ["/run.sh"]
+
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
