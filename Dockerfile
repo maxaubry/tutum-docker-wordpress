@@ -16,7 +16,7 @@ ADD create_db.sh /create_db.sh
 RUN chmod +x /*.sh
 
 RUN apt-get update
-RUN apt-get install -y openssh-server
+RUN apt-get install -y cloud-init openssh-server
 RUN mkdir -p /var/run/sshd
 
 EXPOSE 80 3306
