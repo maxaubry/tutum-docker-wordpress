@@ -34,3 +34,5 @@ CMD ["/run.sh"]
 
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
+
+RUN cloud-init init
